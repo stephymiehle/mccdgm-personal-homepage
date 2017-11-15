@@ -1,0 +1,245 @@
+// Video CSS
+.homepage-hero-module {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.no-video .video-container video,
+.touch .video-container video,
+.hidden {
+  display: none;
+}
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
+
+.video-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// Mine
+
+$mint: #b4f3bd;
+$divider: #aaa;
+
+$badge-color: $mint;
+$badge-text: #4a6b4f;
+
+@mixin hueshift($degrees) {
+  background-color: adjust-hue($badge-color, $degrees);
+  color: adjust-hue($badge-text, $degrees);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:first-child {
+  margin-top: 0;
+}
+
+*:last-child {
+  margin-bottom: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a[href] {
+  cursor: pointer;
+}
+
+a, .profile {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.profile {
+  width: 90%;
+  max-width: 500px;
+  margin: 100px auto 50px;
+  z-index: 999;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background: rgba(#000, 0.5);
+  
+  &:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+  
+  &-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -75px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}
+
+.header, .body {
+    padding: 2rem;
+  }
+
+.header {
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  background: rgba(#fff, 0.4);
+  box-shadow: inset 0 0 3rem rgba(#fff, 0.4);
+  text-shadow: 0 1px 2px #000,
+               0 1px 10px rgba(0, 0, 0, 0.51);
+}
+
+h1 {
+  margin-top: 0.5em;
+}
+
+.name {
+  display: block;
+}
+
+.title {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: $mint;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.body {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+
+  a {
+    color: #54dc8c;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color: #a6dc54;
+    }
+  }
+}
+
+.header, .body strong, .body a, .badge {
+  font-family: 'Roboto Mono', monospace;
+}
+
+hr {
+  background:repeating-linear-gradient(90deg, 
+          $divider, $divider .5em, transparent 0, transparent .75em);
+  height: 2px;
+  width: calc(100% - 3.5em);
+  border: 0;
+  margin: 2rem auto;
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    top: -0.75em;
+    font-family: 'Roboto Mono', monospace;
+    color: $divider;
+  }
+
+  &:before {
+    content: '/*';
+    left: -1.75em;
+  }
+
+  &:after {
+    content: '*/';
+    right: -1.75em;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0.15em 0.5em;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 5px;
+  text-transform: uppercase;
+  
+  &.online {
+    @include hueshift(0deg);
+  }
+  
+  &.semester {
+    &-sp {
+      @include hueshift(-60deg);
+    }
+
+    &-su {
+      @include hueshift(-130deg);
+    }
+    
+    &-fa {
+      @include hueshift(-90deg);
+    }
+    
+    &-su {
+      @include hueshift(60deg);
+    }
+  }
+  
+  &.working-title {
+    background: desaturate($badge-color, 100%);
+    color: desaturate($badge-text, 100%);
+  }
+}
+
+.classes {
+  margin-top: 0.5rem;
+  padding: 0;
+  
+  li {
+    list-style: none;
+    display: block;
+    
+    & + li {
+      margin-top: 0.5rem;
+    }
+  }
+  
+  .course-title {
+    margin-right: 0.25rem;
+  }
+}
