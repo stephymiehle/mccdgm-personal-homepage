@@ -1,0 +1,218 @@
+/* line 2, /Users/stephy/Dev/mccdgm/homepage.scss */
+.homepage-hero-module {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+/* line 11, /Users/stephy/Dev/mccdgm/homepage.scss */
+.no-video .video-container video,
+.touch .video-container video,
+.hidden {
+  display: none; }
+
+/* line 17, /Users/stephy/Dev/mccdgm/homepage.scss */
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important; }
+
+/* line 22, /Users/stephy/Dev/mccdgm/homepage.scss */
+.video-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #000;
+  position: relative; }
+
+/* line 30, /Users/stephy/Dev/mccdgm/homepage.scss */
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute; }
+
+/* line 36, /Users/stephy/Dev/mccdgm/homepage.scss */
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%; }
+
+/* line 43, /Users/stephy/Dev/mccdgm/homepage.scss */
+video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/* line 64, /Users/stephy/Dev/mccdgm/homepage.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 68, /Users/stephy/Dev/mccdgm/homepage.scss */
+*:first-child {
+  margin-top: 0; }
+
+/* line 72, /Users/stephy/Dev/mccdgm/homepage.scss */
+*:last-child {
+  margin-bottom: 0; }
+
+/* line 76, /Users/stephy/Dev/mccdgm/homepage.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5; }
+
+/* line 82, /Users/stephy/Dev/mccdgm/homepage.scss */
+a[href] {
+  cursor: pointer; }
+
+/* line 86, /Users/stephy/Dev/mccdgm/homepage.scss */
+a, .profile {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+/* line 90, /Users/stephy/Dev/mccdgm/homepage.scss */
+.profile {
+  width: 90%;
+  max-width: 500px;
+  margin: 100px auto 50px;
+  z-index: 999;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: rgba(0, 0, 0, 0.5); }
+  /* line 100, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .profile:hover {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  /* line 104, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -75px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+/* line 114, /Users/stephy/Dev/mccdgm/homepage.scss */
+.header, .body {
+  padding: 2rem; }
+
+/* line 118, /Users/stephy/Dev/mccdgm/homepage.scss */
+.header {
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 2px #000, 0 1px 10px rgba(0, 0, 0, 0.51); }
+
+/* line 130, /Users/stephy/Dev/mccdgm/homepage.scss */
+h1 {
+  margin-top: 0.5em; }
+
+/* line 134, /Users/stephy/Dev/mccdgm/homepage.scss */
+.name {
+  display: block; }
+
+/* line 138, /Users/stephy/Dev/mccdgm/homepage.scss */
+.title {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: #b4f3bd;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+/* line 146, /Users/stephy/Dev/mccdgm/homepage.scss */
+.body {
+  background: #fff;
+  border-radius: 0 0 5px 5px; }
+  /* line 150, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .body a {
+    color: #54dc8c;
+    font-weight: 400;
+    text-decoration: none; }
+    /* line 155, /Users/stephy/Dev/mccdgm/homepage.scss */
+    .body a:hover {
+      color: #a6dc54; }
+
+/* line 161, /Users/stephy/Dev/mccdgm/homepage.scss */
+.header, .body strong, .body a, .badge {
+  font-family: 'Roboto Mono', monospace; }
+
+/* line 165, /Users/stephy/Dev/mccdgm/homepage.scss */
+hr {
+  background: repeating-linear-gradient(90deg, #aaa, #aaa 0.5em, transparent 0, transparent 0.75em);
+  height: 2px;
+  width: calc(100% - 3.5em);
+  border: 0;
+  margin: 2rem auto;
+  position: relative; }
+  /* line 174, /Users/stephy/Dev/mccdgm/homepage.scss */
+  hr:before, hr:after {
+    position: absolute;
+    top: -0.75em;
+    font-family: 'Roboto Mono', monospace;
+    color: #aaa; }
+  /* line 181, /Users/stephy/Dev/mccdgm/homepage.scss */
+  hr:before {
+    content: '/*';
+    left: -1.75em; }
+  /* line 186, /Users/stephy/Dev/mccdgm/homepage.scss */
+  hr:after {
+    content: '*/';
+    right: -1.75em; }
+
+/* line 192, /Users/stephy/Dev/mccdgm/homepage.scss */
+.badge {
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0.15em 0.5em;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 5px;
+  text-transform: uppercase; }
+  /* line 201, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.online {
+    background-color: #b4f3bd;
+    color: #4a6b4f; }
+  /* line 206, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.semester-sp {
+    background-color: #eaf3b4;
+    color: #666b4a; }
+  /* line 210, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.semester-su {
+    background-color: #f3b4b6;
+    color: #6b4a4b; }
+  /* line 214, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.semester-fa {
+    background-color: #f3ddb4;
+    color: #6b604a; }
+  /* line 218, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.semester-su {
+    background-color: #b4eaf3;
+    color: #4a666b; }
+  /* line 223, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .badge.working-title {
+    background: #d4d4d4;
+    color: #5b5b5b; }
+
+/* line 229, /Users/stephy/Dev/mccdgm/homepage.scss */
+.classes {
+  margin-top: 0.5rem;
+  padding: 0; }
+  /* line 233, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .classes li {
+    list-style: none;
+    display: block; }
+    /* line 237, /Users/stephy/Dev/mccdgm/homepage.scss */
+    .classes li + li {
+      margin-top: 0.5rem; }
+  /* line 242, /Users/stephy/Dev/mccdgm/homepage.scss */
+  .classes .course-title {
+    margin-right: 0.25rem; }
+
+/*# sourceMappingURL=homepage.css.map */

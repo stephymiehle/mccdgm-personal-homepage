@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stephy Miehle on MCCDGM</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto+Mono:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="homepage.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="profile">
+    <div class="header">
+      <div class="header-bg"></div>
+      <img src="stephy-miehle.jpg" alt="Stephy Miehle" class="profile-pic">
+      <h1>
+        <span class="name">Stephy Miehle</span>
+        <span class="title">Digital Media Instructor</span>
+      </h1>
+    </div>
+
+    <div class="body">
+
+      <p>
+        <strong>Office Hours * </strong>&#8203;This semester, I am not on campus, but you can easily reach me online! If you need to contact me, send me a message through Canvas or email me at <a href="mailto:smiehle@mchenry.edu">smiehle@mchenry.edu</a>
+      </p>
+
+      <hr>
+
+      <strong>Current</strong>
+      <ul class="classes">
+        <li class="class">
+          <span class="course-title">Web Development I</span>
+          <span class="semester-fa badge">Fall</span>
+          <span class="online badge">Online</span>
+        </li>
+        <li class="class">
+          <span class="course-title">Portfolio Design</span>
+          <span class="semester-fa badge">Fall</span>
+          <span class="online badge">Online</span>
+        </li>
+      </ul>
+
+      <strong>Upcoming in 2018</strong>
+      <ul class="classes">
+        <li class="class">
+          <span class="course-title">Command Line for Web Developers</span>
+          <span class="semester-sp badge">Spring</span>
+          <span class="online badge">Online</span>
+        </li>
+        <li class="class">
+          <span class="course-title">User Interface Design</span>
+          <span class="semester-sp badge">Spring</span>
+          <span class="online badge">Online</span>
+        </li>
+        <li class="class">
+          <span class="course-title">Digital Freelancing</span>
+          <span class="semester-fa badge">Fall</span>
+          <span class="online badge">Online</span>
+        </li>
+        <li class="class">
+          <span class="course-title">Web Development I</span>
+          <span class="semester-fa badge">Fall</span>
+          <span class="online badge">Online</span>
+        </li>
+      </ul>
+      
+      <hr>
+      
+      <p>
+        <strong>About * </strong>&#8203;I have been with MCC since 2013 and mostly teach front-end web development. I also created the resource page for <a href="http://mccdgm.net/">MCCDGM</a>. When I'm not teaching, I run my own freelance business. I&nbsp;love travel, cooking, and making friends with birds.
+      </p>
+    </div>
+  </div>
+
+  <div class="homepage-hero-module">
+    <div class="video-container">
+      <div class="filter"></div>
+      <video autoplay loop class="fillWidth">
+        <source src="http://stephy.mccdgm.net/videos/MP4/Love-Coding.mp4" type="video/mp4" />
+        <source src="http://stephy.mccdgm.net/videos/WEBM/Love-Coding.webm" type="video/webm" />
+        Your browser does not support the video tag! :(
+      </video>
+      <div class="poster hidden">
+        <img src="http://stephy.mccdgm.net/videos/Snapshots/Love-Coding.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function scaleVideo() {
+      var vid = document.getElementsByTagName('video')[0];
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      if (w / 16 >= h / 9) {
+        vid.setAttribute('width', w);
+        vid.setAttribute('height', 'auto');
+      } else {
+        vid.setAttribute('width', 'auto');
+        vid.setAttribute('height', h);
+      }
+    }
+  </script>
+</body>
+
+</html>
