@@ -1,13 +1,8 @@
-#created by travis-deploy-ssh
-
-#env:
-# - DEPLOY_HOST=
-# - DEPLOY_USER=
-# - DEPLOY_PASSWORD=
-# - DEPLOY_TARGET_FILE=
-before_deploy:
- - chmod u+x node_modules/travis-deploy-ssh/deploy.sh
+language: generic
 deploy:
- provider: script
- skip_cleanup: true
- script: node_modules/travis-deploy-ssh/deploy.sh
+  provider: script
+  skip_cleanup: true
+  script: node_modules/travis-deploy-ssh/deploy.sh
+notifications:
+  slack:
+    secure: im0iusgneGl2yNpjWbBnNbgw8deedckPGlJTAOC/5mh84fbg4eEEBJcxVr6BM4GnJ0eB1SxRLj1eBe3fIDc8q4Q6/ak4h16DEcuArxLNw65T2aSIYnLW9YJsUmKmCuCt5iIak+Avm7QohJ9f/Y4AwTkKSfxHCpNctSpBBYiUc260QG4+BV+dvBNUbhopYaC5KVMJhDw0+yReMeJIeJppxrADpKtix3yUfmxHSH96d+bzASDqDVSwp/sN14WLLHhjlMfmBcIUD1cXDGUhPWyw0/pj3llt1myVmjiuTD6g/YWfAgQevlg+ZxXf+9AwTuYlijr1d65ge5aJJ5Q2zEC75o2FhHMIQT/Je26Z6oXYI5OmXp5KX2sdxrESQ7KGtZtil5Uiz9mzteHMdwxZIsKVM1/95C2HvLR+g0xpAGdU9bscbw2E5VYq7EVqpT+6Re/ZqtVGBp4G68/k5NJJn29GYizT/rKzM1PKa72xsMqjZCXjtwyBhnCRv79BdYu9otwHCxBt2VjLpdcmKdFVE47IGo/QO8Btm7Ke7D26+GglMExTKXk5RVMSFO+ZFvOdkQGdgGtqBB7VUwstmord4VQXbcmPyO6hTLiljGagbhx7B3XgojxIiF1+Z6qB2Hqlf2b9p5Gr5xP+znn4v5V7wCnKcG/DIZekdE1AqdL/g9A5yTQ=

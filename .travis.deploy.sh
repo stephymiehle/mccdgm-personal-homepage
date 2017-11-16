@@ -8,5 +8,7 @@
 # git pull
 
 echo start
-#whatever you want to do on deployment target host
+cd public_html
+git clone --depth=1 git@github.com:blindingstars/mccdgm-personal-homepage.git .
+rm -rf !$/.git
 echo end
